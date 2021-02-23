@@ -4,6 +4,7 @@ const weatherData = require('./data/weather.json');
 
 const express = require('express');
 const cors = require('cors');
+const { response } = require('express');
 require('dotenv').config();
 
 const app = express();
@@ -31,14 +32,16 @@ function Location (fileData, cityName) {
 
 /////////////////////////WEATHER/////////////////////////
 
+app.get('/location', seaWeather);
 
-weatherData.data.forEach(forecast => {
-  const results = [];
-  results.push(new Weather(forecast));
-  console.log(results);
-  return results;
-});
-
+function seaWeather(response){
+  weatherData.data.forEach(forecast => {
+    const results = [];
+    results.push(new Weather(forecast));
+    console.log(results);
+    response.send(results);
+  });
+}
 function Weather (day) {
   this.forecast = day.weather.description;
   this.time = day.valid_date;
