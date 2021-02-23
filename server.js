@@ -4,7 +4,6 @@ const weatherData = require('./data/weather.json');
 
 const express = require('express');
 const cors = require('cors');
-const { response } = require('express');
 require('dotenv').config();
 
 const app = express();
@@ -20,7 +19,6 @@ function getRequest(request, response){
   // const xyz = {search_query: request.query.city, formatted_query: location[0].display_name, latitude: location[0].lat, longitude: location[0].lon};
   // console.log(request.query);
   // response.send(xyz);
-  console.log(output);
 }
 function Location (fileData, cityName) {
   this.search_query = cityName;
@@ -32,23 +30,21 @@ function Location (fileData, cityName) {
 
 /////////////////////////WEATHER/////////////////////////
 
-app.get('/location', seaWeather);
+app.get('/weather', seaWeather);
 
-function seaWeather(response){
+const results = [];
+function seaWeather(request, response){
+  console.log('stuff');
   weatherData.data.forEach(forecast => {
-    const results = [];
     results.push(new Weather(forecast));
     console.log(results);
-    response.send(results);
   });
+  response.send(results);
 }
+
 function Weather (day) {
   this.forecast = day.weather.description;
   this.time = day.valid_date;
 }
 
-
-
-
 app.listen(PORT, () => console.log(`app is up on port http://localhost:${PORT}`));
-
