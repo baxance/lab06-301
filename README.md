@@ -25,12 +25,32 @@ You need the location and weather .json  files, package.json with `express`, `co
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 -->
 
-Number and name of feature: ________________________________
+Number and name of feature: 7-1 Data Formatting
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 2 hours
 
-Start time: _____
+Start time: 3:00
 
-Finish time: _____
+Finish time: ~5:15
 
-Actual time needed to complete: _____
+Actual time needed to complete: 135 minutes
+
+Number and name of feature: 7-2 Locations
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 3:00 did concurrently with 7-1
+
+Finish time: ~5:15
+
+Actual time needed to complete: 135 minutes
+
+Number and name of feature: 7-2 Weather
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 6:00
+
+Finish time: ~9:30
+
+Actual time needed to complete: ~210 minutes
