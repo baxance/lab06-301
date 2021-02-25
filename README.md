@@ -2,7 +2,7 @@
 # Node, NPM and Express
 
 **Author**: Barrett Nance
-**Version**: 1.0.1 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.0.2 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
@@ -17,15 +17,11 @@ You need the location and weather .json  files, package.json with `express`, `co
 
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource.
+02-24-2021 3:08pm - plugged in API key to front end, map now populating
+02-24-2021 4:20pm - got the parks API data to populate on front end
 
-## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
-
-Number and name of feature: 7-1 Data Formatting
+### Number and name of feature: 7-1 Data Formatting
 
 Estimate of time needed to complete: 2 hours
 
@@ -35,7 +31,7 @@ Finish time: ~5:15
 
 Actual time needed to complete: 135 minutes
 
-Number and name of feature: 7-2 Locations
+### Number and name of feature: 7-2 Locations
 
 Estimate of time needed to complete: 2 hours
 
@@ -45,12 +41,23 @@ Finish time: ~5:15
 
 Actual time needed to complete: 135 minutes
 
-Number and name of feature: 7-2 Weather
+### Number and name of feature: 7-3 Weather
 
 Estimate of time needed to complete: 2 hours
 
-Start time: 6:00
+Start time: 6:00 
 
 Finish time: ~9:30
 
 Actual time needed to complete: ~210 minutes
+
+### Number and name of feature: 7-4 Parks
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 2:00
+
+Finish time: 4:19
+
+Actual time needed to complete: ~139 minutes
+
