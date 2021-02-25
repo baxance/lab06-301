@@ -15,7 +15,6 @@ You need the location and weather .json  files, package.json with `express`, `co
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
-
 ## Change Log
 
 02-24-2021 3:08pm - plugged in API key to front end, map now populating
@@ -45,7 +44,7 @@ Actual time needed to complete: 135 minutes
 
 Estimate of time needed to complete: 2 hours
 
-Start time: 6:00 
+Start time: 6:00
 
 Finish time: ~9:30
 
@@ -61,3 +60,12 @@ Finish time: 4:19
 
 Actual time needed to complete: ~139 minutes
 
+### Number and name of feature: 8-1 Database
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 4:30
+
+Finish time: 4:19
+
+Actual time needed to complete: ~139 minutes
