@@ -1,16 +1,21 @@
 'use strict';
 
 // PACKAGES
+const pg = require('pg');
 const express = require('express');
 const cors = require('cors');
 const superagent = require('superagent');
-const { response } = require('express');
 require('dotenv').config();
 
 const PORT = process.env.PORT || 2134;
+
 const GEOCODE_API_KEY = process.env.GEOCODE_API_KEY;
 const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
 const PARK_API_KEY= process.env.PARK_API_KEY;
+
+const DATABASE_URL = process.env.DATABASE_URL;
+const client = new pg.Client(DATABASE_URL);
+client.on('error', error => console.log(error));
 
 const app = express();
 app.use(cors());
@@ -78,11 +83,5 @@ function Parks (object) {
   this.description = object.description;
   this.url = object.url;
 }
-
-//name": "Klondike Gold Rush - Seattle Unit National Historical Park",
-// "address": "319 Second Ave S." "Seattle" "WA" "98104",
-// "fee": "0.00",
-// "description": "Seattle flourished during and after the Klondike Gold Rush. Merchants supplied people from around the world passing through this port city on their way to a remarkable adventure in Alaska. Today, the park is your gateway to learn about the Klondike Gold Rush, explore the area's public lands, and engage with the local community.",
-// "url": "https://www.nps.gov/klse/index.htm"
 
 app.listen(PORT, () => console.log(`app is up on port http://localhost:${PORT}`));
