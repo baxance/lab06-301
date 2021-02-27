@@ -62,8 +62,11 @@ function getLocation(req, res){
           });
       }
     })
-    .catch(err => console.log(err));
+    .catch(error => {
+      res.send('broke', error);
+    });
 }
+
 
 function Location (fileData, cityName) {
   this.search_query = cityName;
@@ -82,6 +85,9 @@ function getWeather(req, res){
         return new Weather(weatherDay);
       });
       res.send(output);
+    })
+    .catch(error => {
+      res.send('broke', error);
     });
 }
 
@@ -101,6 +107,9 @@ function getParks(req, res){
       });
       // const output = new Parks(parkData);
       res.send(parkData);
+    })
+    .catch(error => {
+      res.send('broke', error);
     });
 }
 
@@ -124,6 +133,9 @@ function getYelp(req, res){
         return new Yelp(yelpSummary);
       });
       res.send(output);
+    })
+    .catch(error => {
+      res.send('broke', error);
     });
 }
 
@@ -147,6 +159,9 @@ function getMovies(req, res){
         return new Movie(movieData);
       });
       res.send(output);
+    })
+    .catch(error => {
+      res.send('broke', error);
     });
 }
 
