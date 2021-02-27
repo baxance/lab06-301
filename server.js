@@ -169,6 +169,7 @@ function Movie(data){
   this.title = data.original_title;
   this.overview = data.overview;
   this.votes = data.vote_average;
+  this.image_url = `https://www.themoviedb.org/t/p/w600_and_h900_bestv2${data.poster_path}` || 'sorry no image';
   this.popularity = data.popularity;
   this.released = data.released_on;
 }
